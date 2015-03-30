@@ -1,5 +1,8 @@
 'use strict';
 
+//For this challenge you will be determining the 
+//multiplicative persistence for a given number.
+
 function MultiplicativePersistence(num) { 
   var counter = 0;
   var numArray;
