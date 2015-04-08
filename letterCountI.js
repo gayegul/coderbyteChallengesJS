@@ -1,3 +1,6 @@
+'use strict';
+
+//determine which word has the greatest number of repeated letters.
 
 function maxRepetition(word) {
   var maxNumber = 0;
