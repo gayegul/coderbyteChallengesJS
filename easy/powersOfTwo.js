@@ -1,3 +1,5 @@
+'use strict';
+
 //For this challenge you will be determining 
 //whether or not a number is a power of two.
 
@@ -8,7 +10,7 @@ function PowersofTwo(num) {
     }
   }
   return false;       
-};
+}
 
 
 

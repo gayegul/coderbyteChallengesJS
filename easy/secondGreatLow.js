@@ -1,8 +1,7 @@
 'use strict';
 
-//SecondGreatLow(arr) take the array of numbers stored
-//in arr and return the second lowest and second greatest
-//numbers, respectively, separated by a space.
+//Take the array of numbers stored in arr and return the second 
+//lowest and second greatest numbers, respectively, separated by space.
 
 function SecondGreatLow(arr) {
   function sortByMagnitude(a, b) {
@@ -16,8 +15,9 @@ function SecondGreatLow(arr) {
       return 0;
     }
   }
-  arr.sort(sortByMagnitude);
 
+  arr.sort(sortByMagnitude);
+  
   var secondLowest, secondGreatest;
 
   for (var i = 0; i < arr.length; i++) {

@@ -1,7 +1,7 @@
 'use strict';
 
 //For this challenge you will be manipulating
-//a string using dashes (-) "1235789" -> "123-5-789"
+//a string using dashes (-) "1235789" -> "123-5-789".
 
 function DashInsert(str) {
   var arr = str.split("");

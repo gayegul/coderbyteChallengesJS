@@ -1,6 +1,7 @@
 'use strict';
-//return the greatest common factor of two numbers if num1= 30
-//and num2=15 then result=15
+
+//Return the greatest common factor of two numbers 
+//if num1= 30 and num2=15 then result=15.
 
 function Division(num1, num2) {
   var greatestSoFar = 1;
