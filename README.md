@@ -1,3 +1,3 @@
 # coderbyteChallengesJS
 
-My solutions to Coderbyte.com challenge questions in JavaScript. 
+My solutions to coderbyte.com code challenges in JavaScript. 
