@@ -8,17 +8,17 @@ from the lowest number to the highest number.
 
 function Consecutive(arr) {
   var counter = 0;
-  for(var i = 0; i < arr[arr.length-1]; i++) {
-    while(arr[i] + 1 !== arr[i+1] || arr[i] - 1 !== arr[i+1]) {
-      if(arr[i] + 1 < arr[i+1]) {
-        counter++;
-        arr[i] = arr[i] + 1;
-      }
-      else if (arr[i] - 1 > arr[i+1]) {
-        counter++;
-        arr[i] = arr[i] - 1;
-      }
+  arr.sort(function(a, b){return a-b});
+  var lowest = arr[0];
+  var highest = arr[arr.length-1];
+
+  while(lowest + 1 < highest) {
+    if (arr.indexOf(lowest + 1) !== -1) {
+      counter = counter;
+    } else {
+      counter++;
     }
+    lowest += 1;
   }
   return counter;
 }
