@@ -7,18 +7,20 @@ from the lowest number to the highest number.
 */
 
 function Consecutive(arr) {
+  arr.sort(function(a, b) {
+    return a-b;
+  });
+
   var counter = 0;
-  arr.sort(function(a, b){return a-b});
   var lowest = arr[0];
   var highest = arr[arr.length-1];
 
   while(lowest + 1 < highest) {
-    if (arr.indexOf(lowest + 1) !== -1) {
-      counter = counter;
-    } else {
+    if (arr.indexOf(lowest + 1) === -1) {
       counter++;
     }
     lowest += 1;
   }
+
   return counter;
 }
