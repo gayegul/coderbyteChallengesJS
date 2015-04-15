@@ -11,18 +11,18 @@ first). If there is no mode return -1.
 
 function SimpleMode(arr) {
   var numbers = {};
-  var biggestNumber = 1;
+  var highestCount = 1;
   var result;
   for (var i = 0; i < arr.length; i++) {
     if(!numbers[arr[i]]) {
       numbers[arr[i]] = 1;
     } else {
       numbers[arr[i]]++;
-      if(biggestNumber < numbers[arr[i]]) {
-        biggestNumber = numbers[arr[i]];
+      if(highestCount < numbers[arr[i]]) {
+        highestCount = numbers[arr[i]];
         result = arr[i];
       }
     }
   }
-  return biggestNumber === 1 ? -1 : result;
+  return highestCount === 1 ? -1 : result;
 }
