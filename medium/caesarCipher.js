@@ -23,3 +23,28 @@ function CaesarCipher(str, num) {
   }
   return result;
 }
+
+
+/* BEFORE REFACTOR
+
+var alp = "abcdefghijklmnopqrstuvwxyz";
+var alpUpper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+function CaesarCipher(str, num) {
+  var result = "";
+  for(var i = 0; i < str.length; i++) {
+    var index = alp.indexOf(str[i]);
+    var upperIndex = alpUpper.indexOf(str[i]);
+    if(index !== -1) {
+      result += alp[(index + num) % 26];
+    }
+    else if(upperIndex !== -1) {
+      result += alpUpper[(upperIndex + num) % 26];
+    }
+    else {
+      result += str[i];
+    }
+  }
+  return result;
+}
+*/
