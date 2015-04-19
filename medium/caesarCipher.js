@@ -7,18 +7,15 @@
   be "Ecguct Ekrjgt".
 */
 
-function CaesarCipher(str,num) {
-  str = str.split("");
-  var result = "";
-  var alp = "abcdefghijklmnopqrstuvwxyz".split("");
-  var alpUpper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
+var alp = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
+function CaesarCipher(str, num) {
+  var result = "";
   for(var i = 0; i < str.length; i++) {
-    if(alp.indexOf(str[i]) !== -1) {
-      result += alp[(alp.indexOf(str[i]) + num) % 26];
-    }
-    else if(alpUpper.indexOf(str[i]) !== -1) {
-      result += alpUpper[(alpUpper.indexOf(str[i]) + num) % 26];
+    var index = alp.indexOf(str[i]);
+    if(index !== -1) {
+      var offset = (index >= 26) ? 26 : 0;
+      result += alp[offset + ((index + num) % 26)];
     }
     else {
       result += str[i];
