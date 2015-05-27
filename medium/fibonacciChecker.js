@@ -8,13 +8,13 @@ in the Fibonacci sequence, return the string no.
 */
 
 function FibonacciChecker(num) {
-fibNumbers = [0,1];
-for (var i = 0; i <= num; i++) {
-  var nextFib = fibNumbers[i] + fibNumbers[i+1];
-  fibNumbers.push(nextFib);
-  if(fibNumbers.indexOf(num) !== -1) {
-    return "yes";
+  fibNumbers = [0, 1];
+  for (var i = 0; i <= num; i++) {
+    var nextFib = fibNumbers[i] + fibNumbers[i+1];
+    fibNumbers.push(nextFib);
+    if(fibNumbers.indexOf(num) !== -1) {
+      return "yes";
+    }
   }
-}
-return "no";
+  return "no";
 }
