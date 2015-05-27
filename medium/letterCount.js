@@ -1,45 +1,28 @@
-'use strict';
-
-function LetterCount(str) {
-  var arr = str.split(" ");
-  var counter = {};
-  var maxNumber = 0;
-  var result;
-  for(var i = 0; i < arr.length; i++) {
-    for(var j = 0; j < arr[i].length; j++) {
-      if(!counter.arr[i]) {
-        counter.arr[i] = 1;
-      } else {
-        counter.arr[i]++;
-      }
+function countLetters(str) {
+  var container = {};
+  var maxLetterNumber = 0;
+  for(var i = 0; i < str.length; i++) {
+    if(!container[str[i]]) {
+      container[str[i]] = 1;
+    } else {
+      container[str[i]]++;
     }
-    if(counter.arr[i] > maxNumber) {
-      maxNumber = counter.arr[i];
-      result = arr[i];
+    if(maxLetterNumber < container[str[i]]) {
+      maxLetterNumber = container[str[i]];
     }
   }
-  return result;
+  return maxLetterNumber;
 }
-   
-//something is fucked up yo
 
 function LetterCount(str) {
-  var arr = str.split(" ");
-  var counter = {};
-  var maxNumber = 0;
+  str = str.split(" ");
+  var maxNumberOfReps = 0;
   var result;
-  for(var i = 0; i < arr.length; i++) {
-    for(var j = 0; j < arr[i].length; j++) {
-      if(!counter[arr[i]]) {
-        counter[arr[i]] = 1;
-      } else {
-        counter[arr[i]]++;
-      }
-    }
-    if(counter[arr[i]] > maxNumber) {
-      maxNumber = counter[arr[i]];
-      result = arr[i];
+  for (var i = 0; i < str.length; i++) {
+    if(countLetters(str[i]) > maxNumberOfReps) {
+      maxNumberOfReps = countLetters(str[i]);
+      result = str[i];
     }
   }
-  return maxNumber === 1 ? -1 : result;
+  return maxNumberOfReps === 1 ? -1 : result;
 }
