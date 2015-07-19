@@ -1,7 +1,6 @@
 'use strict';
 
-//Have the function PrimeMover(num) return the numth prime number.
-//9th prime number is 23
+/* Have the function PrimeMover(num) return the numth prime number. 9th prime number is 23. */
 
 function PrimeMover(num) {
   var primes = [2];
